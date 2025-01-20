@@ -1,6 +1,6 @@
-FROM node:14 as first_image
+FROM node:14 AS first_image
 WORKDIR /app
-COPY ./ ./client
+COPY ./ /app/client/
 RUN cd client && npm install && npm run build --prod
 
 #second image
